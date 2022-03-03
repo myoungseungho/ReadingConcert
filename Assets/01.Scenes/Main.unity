@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 1458271523}
   - component: {fileID: 1458271522}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ResultText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1114,7 +1114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afd1bbee875b0d4aa0ca5aacf90eec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button: {fileID: 1803318801}
+  starttoogle: 1
+  stoptoogle: 0
+  resulttext: {fileID: 1458271522}
 --- !u!4 &1689806697
 Transform:
   m_ObjectHideFlags: 0

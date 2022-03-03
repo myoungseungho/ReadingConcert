@@ -7,12 +7,8 @@ using FrostweepGames.Plugins.GoogleCloud.SpeechRecognition;
 
 public class ButtonControl : MonoBehaviour
 {
-    //상속, 부모 클래스에서만 사용가능한 필드
-    protected GCSpeechRecognition gcspeech;
+    VoiceControl vc;
 
-    //켰다 껐다
-    bool toogle = false;
-    Text resulttext;
 
     void Start()
     {
@@ -26,20 +22,16 @@ public class ButtonControl : MonoBehaviour
         //버튼을 터치했을 때
         if (collision.gameObject.CompareTag("LHANDCOLLIDER") || collision.gameObject.CompareTag("RHANDCOLLIDER"))
         {
-            //toogle이 false일 때
-            if (!toogle)
+            //토글이 꺼져있을 때
+            if (vc.starttoogle == false)
             {
-                //녹음을 켜놓는다.
-                gcspeech.StartRecord(false);
-                toogle = true;
+                //녹음 시작
+                vc.StartRecord();
             }
             else
             {
-                //녹음을 꺼놓는다.
-                gcspeech.StopRecord();
-                toogle = false;
+                vc.EndRecord();
             }
-
         }
     }
 }
