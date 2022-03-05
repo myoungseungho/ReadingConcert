@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 276, y: 192}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 23
+  controlID: 99
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 153
+  controlID: 149
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 22
+  controlID: 98
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 130
+  controlID: 56
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -479,7 +479,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/01.Scenes
+    - Assets/FrostweepGames/GCSpeechRecognition/GCSR_Examples/GCSR_Example_1
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -524,15 +524,15 @@ MonoBehaviour:
     m_ExpandedIDs: ffffffff00000000f45e0000f65e0000f85e0000fa5e0000fc5e0000fe5e0000005f0000025f0000045f0000065f0000085f00000a5f00000c5f00000e5f0000105f0000125f0000145f0000165f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: GCSR_Example
-      m_OriginalName: GCSR_Example
+      m_Name: VoiceControl
+      m_OriginalName: VoiceControl
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 30944
+      m_UserData: 3866
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -753,7 +753,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.06619028, y: 0.04755968, z: -0.0031304813, w: 0.9966983}
     speed: 2
-    m_Value: {x: 0.06618828, y: 0.047558244, z: -0.003130387, w: 0.9966683}
+    m_Value: {x: -0.06619028, y: -0.04755968, z: 0.0031304813, w: -0.9966983}
   m_Size:
     m_Target: 36.797024
     speed: 2
@@ -810,9 +810,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d4780000
+      m_SelectedIDs: d8130000
       m_LastClickedID: 0
-      m_ExpandedIDs: 38bffffffcddffffd2e1ffffa4f7ffff4cfbfffff67c00006c7e0000c27e0000967f0000aa7f0000a8810000c08100001e8300009a830000
+      m_ExpandedIDs: 4cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
