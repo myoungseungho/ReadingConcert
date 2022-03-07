@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.Examples;
 
 public class RecordButton : ButtonControl
@@ -10,6 +11,8 @@ public class RecordButton : ButtonControl
 
     GCSR_Example gcsrexam;
     public GameObject MainCamera;
+
+    public Text resulttext;
 
     bool isrecord = false;
     //녹음버튼 관련
@@ -35,15 +38,24 @@ public class RecordButton : ButtonControl
                 Debug.Log("Startrecord 메서드 탑승");
                 gcsrexam.StartRecordButtonOnClickHandler();
                 isrecord = true;
+                Invoke("TransferText", 1f);
             }else
             {
                 Debug.Log("Stoprecord 메서드 탑승");
                 gcsrexam.StopRecordButtonOnClickHandler();
                 isrecord = false;
+                Invoke("TransferText", 1f);
             }
-
         }
+    }
+
+
+
        
+
+    void TransferText()
+    {
+        resulttext.text = gcsrexam._resultText.text;
     }
 
 }

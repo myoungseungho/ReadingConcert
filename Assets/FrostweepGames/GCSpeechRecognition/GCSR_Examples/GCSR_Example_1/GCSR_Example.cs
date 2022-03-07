@@ -19,7 +19,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.Examples
 
         private Image _speechRecognitionState;
 
-        private Text _resultText;
+        public Text _resultText;
 
         private Toggle _voiceDetectionToggle,
                        _recognizeDirectlyToggle,
@@ -348,7 +348,6 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.Examples
 
         private void RecognizeSuccessEventHandler(RecognitionResponse recognitionResponse)
         {
-            _resultText.text = "Recognize Success.";
             InsertRecognitionResponseInfo(recognitionResponse);
         }
 
@@ -359,30 +358,30 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.Examples
 
             _resultText.text = "Long Running Recognize Success.\n Operation name: " + operation.name;
 
-            if (operation != null && operation.response != null && operation.response.results.Length > 0)
-            {
-                _resultText.text = "Long Running Recognize Success.";
-                _resultText.text += "\n" + operation.response.results[0].alternatives[0].transcript;
+            //if (operation != null && operation.response != null && operation.response.results.Length > 0)
+            //{
+            //    _resultText.text = "Long Running Recognize Success.";
+            //    _resultText.text += "\n" + operation.response.results[0].alternatives[0].transcript;
 
-                string other = "\nDetected alternatives:\n";
+            //    string other = "\nDetected alternatives:\n";
 
-                foreach (var result in operation.response.results)
-                {
-                    foreach (var alternative in result.alternatives)
-                    {
-                        if (operation.response.results[0].alternatives[0] != alternative)
-                        {
-                            other += alternative.transcript + ", ";
-                        }
-                    }
-                }
+            //    foreach (var result in operation.response.results)
+            //    {
+            //        foreach (var alternative in result.alternatives)
+            //        {
+            //            if (operation.response.results[0].alternatives[0] != alternative)
+            //            {
+            //                other += alternative.transcript + ", ";
+            //            }
+            //        }
+            //    }
 
-                _resultText.text += other;
-            }
-            else
-            {
-                _resultText.text = "Long Running Recognize Success. Words not detected.";
-            }
+            //    _resultText.text += other;
+            //}
+            //else
+            //{
+            //    _resultText.text = "Long Running Recognize Success. Words not detected.";
+            //}
         }
 
         private void InsertRecognitionResponseInfo(RecognitionResponse recognitionResponse)
@@ -393,7 +392,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.Examples
                 return;
             }
 
-            _resultText.text += "\n" + recognitionResponse.results[0].alternatives[0].transcript;
+            _resultText.text += /*"\n" + */recognitionResponse.results[0].alternatives[0].transcript;
 
             var words = recognitionResponse.results[0].alternatives[0].words;
 
@@ -401,28 +400,28 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.Examples
             {
                 string times = string.Empty;
 
-                foreach (var item in recognitionResponse.results[0].alternatives[0].words)
-                {
-                    times += "<color=green>" + item.word + "</color> -  start: " + item.startTime + "; end: " + item.endTime + "\n";
-                }
+                //foreach (var item in recognitionResponse.results[0].alternatives[0].words)
+                //{
+                //    times += "<color=green>" + item.word + "</color> -  start: " + item.startTime + "; end: " + item.endTime + "\n";
+                //}
 
                 _resultText.text += "\n" + times;
             }
 
-            string other = "\nDetected alternatives: ";
+            //string other = "\nDetected alternatives: ";
 
-            foreach (var result in recognitionResponse.results)
-            {
-                foreach (var alternative in result.alternatives)
-                {
-                    if (recognitionResponse.results[0].alternatives[0] != alternative)
-                    {
-                        other += alternative.transcript + ", ";
-                    }
-                }
-            }
+            //foreach (var result in recognitionResponse.results)
+            //{
+            //    foreach (var alternative in result.alternatives)
+            //    {
+            //        if (recognitionResponse.results[0].alternatives[0] != alternative)
+            //        {
+            //            other += alternative.transcript + ", ";
+            //        }
+            //    }
+            //}
 
-            _resultText.text += other;
+            //_resultText.text += other;
         }
     }
 }
