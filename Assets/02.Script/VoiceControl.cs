@@ -14,7 +14,7 @@ public class VoiceControl : MonoBehaviour
     public bool stoptoogle = false;
 
     //인식 되었을 때 이미지
-    public Image stateimage;
+    //public Image stateimage;
 
 
     //한글 결과 토글
@@ -24,6 +24,7 @@ public class VoiceControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gcspeech = GameObject.Find("GCSpeechRecognition").GetComponent<GCSpeechRecognition>();
         gcspeech.RecordFailedEvent += RecordFailedEventHandler;
         gcspeech.RecognizeSuccessEvent += RecognizeSuccessEventHandler;
     }
@@ -42,6 +43,7 @@ public class VoiceControl : MonoBehaviour
         stoptoogle = true;
         resulttext.text = string.Empty;
         gcspeech.StartRecord(true);
+        Debug.Log("StartRecord 메서드작동");
     }
 
     public void EndRecord()
@@ -49,11 +51,13 @@ public class VoiceControl : MonoBehaviour
         stoptoogle = false;
         starttoogle = true;
         gcspeech.StopRecord();
+        Debug.Log("EndRecord 메서드작동");
     }
+
 
     private void RecordFailedEventHandler()
     {
-        stateimage.color = Color.yellow;
+        //stateimage.color = Color.yellow;
         resulttext.text = "<color=red>Start record Failed. Please check microphone device and try again.</color>";
 
         stoptoogle = false;
