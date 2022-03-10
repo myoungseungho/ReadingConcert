@@ -11,21 +11,69 @@ public class RecordButton : ButtonControl
 
     GCSR_Example gcsrexam;
     public GameObject MainCamera;
-
     public Text resulttext;
-
     bool isrecord = false;
-    //녹음버튼 관련
-    public override void OnCollisionEnter(Collision collision)
+    MusicButton musicButton;
+
+
+    private void OnEnable()
     {
+        GCSR_Example.imagechangemoment += ChangeImage;
+        GCSR_Example.textchangemoment += ChangeText;
 
     }
 
+    private void OnDisable()
+    {
+        GCSR_Example.imagechangemoment -= ChangeImage;
+        GCSR_Example.textchangemoment += ChangeText;
 
+    }
+
+    void ChangeImage()
+    {
+        gameObject.GetComponent<Renderer>().material.color = gcsrexam._speechRecognitionState.color;
+    }
+
+    void ChangeText()
+    {
+        resulttext.text = gcsrexam._resultText.text;
+        if (isrecord == false)
+        {
+            //여기서 생겨난 글을 저장함
+            PlayerPrefs.SetString("Resulttext", resulttext.text);
+        }
+    }
+
+    //녹음버튼 관련
+    //터치하면 
+    public override void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("LHANDCOLLIDER") || collision.gameObject.CompareTag("RHANDCOLLIDER"))
+        {
+            //if (isrecord == false)
+            //{
+            //    Debug.Log("Startrecord 메서드 탑승");
+            //    gcsrexam.StartRecordButtonOnClickHandler();
+            //    isrecord = true;
+            //}
+            //else
+            //{
+            //    Debug.Log("Stoprecord 메서드 탑승");
+            //    gcsrexam.StopRecordButtonOnClickHandler();
+            //    isrecord = false;
+            //}
+        }
+
+    }
 
     void Start()
     {
         gcsrexam = MainCamera.GetComponent<GCSR_Example>();
+        gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+        musicButton = GameObject.Find("MusicStartPauseButton").GetComponent<MusicButton>();
+        resulttext.text = PlayerPrefs.GetString("Resulttext");
+
     }
 
     private void Update()
@@ -36,28 +84,31 @@ public class RecordButton : ButtonControl
             if (isrecord == false)
             {
                 Debug.Log("Startrecord 메서드 탑승");
+                if (musicButton.ismusic == true)
+                {
+                    musicButton.MusicPause();
+                }
+
+
                 gcsrexam.StartRecordButtonOnClickHandler();
                 isrecord = true;
-                Invoke("TransferText", 1f);
-            }else
+
+            }
+            else
             {
                 Debug.Log("Stoprecord 메서드 탑승");
                 gcsrexam.StopRecordButtonOnClickHandler();
                 isrecord = false;
-                Invoke("TransferText", 1f);
+                Invoke("TransferText", 2f);
+                if (musicButton.ingmusic == true)
+                {
+                    musicButton.MusicStart();
+                }
+
+
             }
         }
     }
-
-
-
-       
-
-    void TransferText()
-    {
-        resulttext.text = gcsrexam._resultText.text;
-    }
-
 }
 
 

@@ -24,6 +24,8 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 			}
 		}
 
+
+
 		public event Action<RecognitionResponse> RecognizeSuccessEvent;
 		public event Action<string> RecognizeFailedEvent;
 		public event Action<Operation> LongRunningRecognizeSuccessEvent;

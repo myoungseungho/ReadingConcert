@@ -1,0 +1,7 @@
+공부할[[:space:]]때[[:space:]]듣기[[:space:]]좋은[[:space:]]메이플스토리[[:space:]]명곡[[:space:]]BGM[[:space:]]22선[[:space:]]피아노[[:space:]]모음[[:space:]]Maplestory[[:space:]]BGM[[:space:]]22[[:space:]]song[[:space:]]Piano[[:space:]]Compilation_320kbps.mp3 filter=lfs diff=lfs merge=lfs -text
+MapleStory.mp3 filter=lfs diff=lfs merge=lfs -text
+C:GithubReadingConcertAssets05.Sounds/MapleStory.mp3 filter=lfs diff=lfs merge=lfs -text
+c/Github/ReadingConcert/Assets/05.Sounds/MapleStory.mp3 filter=lfs diff=lfs merge=lfs -text
+MapleStroy.mp3 filter=lfs diff=lfs merge=lfs -text
+Assets/05.Sounds/MapleStory.mp3 filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text

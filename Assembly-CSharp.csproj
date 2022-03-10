@@ -90,6 +90,7 @@
     <Compile Include="Assets\FrostweepGames\GCSpeechRecognition\Scripts\Core\Settings\Enumerators.cs" />
     <Compile Include="Assets\Resources\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportAimVisualLaser.cs" />
     <Compile Include="Assets\AutoHand\Scripts\Internal\HandPoseScriptable.cs" />
+    <Compile Include="Assets\02.Script\MusicButton.cs" />
     <Compile Include="Assets\Resources\Oculus\SampleFramework\Core\Video\Scripts\MoviePlayerSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Resources\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportDestination.cs" />
@@ -195,7 +196,7 @@
     <Compile Include="Assets\FrostweepGames\_Generic\Tools\Attributes\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\AutoHand\Examples\Scenes\Oculus Integration\Scripts\OVRTeleporterLink.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
-    <Compile Include="Assets\FrostweepGames\GCSpeechRecognition\GCSR_Examples\GCSR_Example_1\GCSR_Example.cs" />
+    <Compile Include="Assets\02.Script\GCSR_Example.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\AutoHand\Scripts\Demo\Demo Scene\CubeBreak.cs" />
     <Compile Include="Assets\AutoHand\Scripts\Hand\HandTouchEvent.cs" />
@@ -360,6 +361,7 @@
     <Compile Include="Assets\Resources\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportAimHandler.cs" />
     <Compile Include="Assets\Resources\Oculus\SampleFramework\Usage\Passthrough\Scripts\FlashlightController.cs" />
     <Compile Include="Assets\Resources\Oculus\SampleFramework\Usage\SpatialAnchor\Scripts\AnchorHelpers.cs" />
+    <Compile Include="Assets\02.Script\MusicInitButton.cs" />
     <Compile Include="Assets\Resources\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\RayToolView.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\Resources\Oculus\Avatar\Samples\AvatarGallery\Scripts\OvrAvatarTestDriver.cs" />
