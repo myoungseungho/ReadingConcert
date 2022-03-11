@@ -377,6 +377,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/VoiceSDK.Runtime.ref.dll"
 "Assets/02.Script/ButtonControl.cs"
 "Assets/02.Script/GCSR_Example.cs"
+"Assets/02.Script/HandManager.cs"
 "Assets/02.Script/MusicButton.cs"
 "Assets/02.Script/MusicInitButton.cs"
 "Assets/02.Script/RecordButton.cs"

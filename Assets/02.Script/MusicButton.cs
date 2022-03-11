@@ -15,9 +15,9 @@ public class MusicButton : ButtonControl
         audioSource = gameObject.GetComponent<AudioSource>();
 
     }
-    public override void OnCollisionEnter(Collision collision)
+    public override void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("LHANDCOLLIDER") || collision.gameObject.CompareTag("RHANDCOLLIDER"))
+        if (other.gameObject.layer.Equals(LayerMask.NameToLayer("HANDCOLLIDER")))
         {
             if (ismusic == false)
             {

@@ -14,13 +14,11 @@ public class MusicInitButton : ButtonControl
         musicButton = GameObject.Find("MusicStartPauseButton").GetComponent<MusicButton>();
     }
 
-    public override void OnCollisionEnter(Collision collision)
+    public override void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("LHANDCOLLIDER") || collision.gameObject.CompareTag("RHANDCOLLIDER"))
+        if (other.gameObject.layer.Equals(LayerMask.NameToLayer("HANDCOLLIDER")))
         {
-
-            Debug.Log("오디오 정지");
-            audioSource.Stop();
+            MusicStop();
         }
     }
     private void Update()
