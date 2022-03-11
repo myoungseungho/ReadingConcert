@@ -47,22 +47,37 @@ public class RecordButton : ButtonControl
 
     //녹음버튼 관련
     //터치하면 
-    public override void OnCollisionEnter(Collision collision)
+    public override void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("LHANDCOLLIDER") || collision.gameObject.CompareTag("RHANDCOLLIDER"))
+        if (other.gameObject.layer.Equals(LayerMask.NameToLayer("HANDCOLLIDER")))
         {
-            //if (isrecord == false)
-            //{
-            //    Debug.Log("Startrecord 메서드 탑승");
-            //    gcsrexam.StartRecordButtonOnClickHandler();
-            //    isrecord = true;
-            //}
-            //else
-            //{
-            //    Debug.Log("Stoprecord 메서드 탑승");
-            //    gcsrexam.StopRecordButtonOnClickHandler();
-            //    isrecord = false;
-            //}
+            Debug.Log("충돌찍히나?");
+            if (isrecord == false)
+            {
+                Debug.Log("Startrecord 메서드 탑승");
+                if (musicButton.ismusic == true)
+                {
+                    musicButton.MusicPause();
+                }
+
+
+                gcsrexam.StartRecordButtonOnClickHandler();
+                isrecord = true;
+
+            }
+            else
+            {
+                Debug.Log("Stoprecord 메서드 탑승");
+                gcsrexam.StopRecordButtonOnClickHandler();
+                isrecord = false;
+                Invoke("TransferText", 2f);
+                if (musicButton.ingmusic == true)
+                {
+                    musicButton.MusicStart();
+                }
+
+
+            }
         }
 
     }
