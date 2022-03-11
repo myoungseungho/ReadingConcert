@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637820430072267124
+      ticks: 637825634473341668
     m_Hash: 1489159118
   m_LockFileStatus:
     m_FilePath: C:/Github/ReadingConcert/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637820430072277125
+      ticks: 637825634473421486
     m_Hash: 4011939489
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
