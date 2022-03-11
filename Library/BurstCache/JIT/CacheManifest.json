@@ -3,11 +3,7 @@
   "Assemblies": [
     {
       "FullName": "Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-<<<<<<< HEAD
-      "LastWriteTime": "2022-03-11T02:44:05.9212549Z"
-=======
-      "LastWriteTime": "2022-03-11T09:59:44.916Z"
->>>>>>> 60f2180f92a85a89d2f53017120eecb59245c039
+      "LastWriteTime": "2022-03-11T15:03:13.987Z"
     },
     {
       "FullName": "netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51",
@@ -19,11 +15,7 @@
     },
     {
       "FullName": "Unity.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-<<<<<<< HEAD
-      "LastWriteTime": "2022-03-11T02:44:05.938036Z"
-=======
-      "LastWriteTime": "2022-03-11T09:59:43.851Z"
->>>>>>> 60f2180f92a85a89d2f53017120eecb59245c039
+      "LastWriteTime": "2022-03-11T15:03:13.921Z"
     },
     {
       "FullName": "UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -35,11 +27,7 @@
     },
     {
       "FullName": "Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-<<<<<<< HEAD
-      "LastWriteTime": "2022-03-11T02:44:05.9548878Z"
-=======
-      "LastWriteTime": "2022-03-11T09:59:44.529Z"
->>>>>>> 60f2180f92a85a89d2f53017120eecb59245c039
+      "LastWriteTime": "2022-03-11T15:03:13.918Z"
     },
     {
       "FullName": "Unity.Burst.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=null",

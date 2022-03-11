@@ -49,8 +49,7 @@ public class RecordButton : ButtonControl
     //터치하면 
     public override void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer.Equals(LayerMask.NameToLayer("HANDCOLLIDER")))
-        {
+        
             Debug.Log("충돌찍히나?");
             if (isrecord == false)
             {
@@ -78,7 +77,7 @@ public class RecordButton : ButtonControl
 
 
             }
-        }
+       
 
     }
 

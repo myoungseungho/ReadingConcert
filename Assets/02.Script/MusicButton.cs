@@ -17,8 +17,7 @@ public class MusicButton : ButtonControl
     }
     public override void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer.Equals(LayerMask.NameToLayer("HANDCOLLIDER")))
-        {
+        
             if (ismusic == false)
             {
                 MusicStart();
@@ -27,7 +26,7 @@ public class MusicButton : ButtonControl
             {
                 MusicPause();
             }
-        }
+        
     }
 
     private void Update()
